@@ -1,0 +1,8 @@
+For panels
+mp3: make xiaolian speak english only.
+mp4: introduce gordon ramly. "The world's top celebrity chef and host of the World Masterchef Competition."
+mp6: draw first frame hawker tables and patrons
+
+
+For code
+install minimap
