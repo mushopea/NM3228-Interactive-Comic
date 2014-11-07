@@ -1,6 +1,7 @@
 For panels
 mp3: make xiaolian speak english only.
 mp4: introduce gordon ramly. "The world's top celebrity chef and host of the World Masterchef Competition."
+mp5: improve the coloring for the hawker center. it has to look like a hawker center. add skies/hdbs in the backdrop.
 mp6: draw first frame hawker tables and patrons
 
 
