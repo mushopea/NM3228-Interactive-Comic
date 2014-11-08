@@ -3,8 +3,16 @@ mp3: make xiaolian speak english only.
 mp4: introduce gordon ramly. "The world's top celebrity chef and host of the World Masterchef Competition."
 mp5: improve the coloring for the hawker center. it has to look like a hawker center. add skies/hdbs in the backdrop.
 mp6: draw first frame hawker tables and patrons
-hdb: add walkway and trees
 
+
+For animation
+-> In long pontian queue, animate ponten queue slowly appearing longer as user scrolls down. "fadeIn"
+-> In "DAMMIT!! BONG", make the "BONG" and red impact lines zoom in. "tada"
+-> In "My family meepok.. really so bad?" make the meepok ghost fade in. "fadeinUp"
+-> In "THIS IS DISGUSTING!" make "THIS IS DISGUSTING!" flash. "flash" 
+-> In "THIS IS DISGUSTING!" make the spit animated with "tada"
+-> In "...?!" make it bounce in with "bounceInDown"
+-> In "...IS THAT?!" make it bounce in with "bounceInDown"
 
 For code
 install minimap
