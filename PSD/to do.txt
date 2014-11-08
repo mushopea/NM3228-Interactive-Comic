@@ -6,6 +6,18 @@ mp6: draw first frame hawker tables and patrons
 
 
 For animation
+===================================================
+INSTRUCTIONS:
+You have to use wow.js. Instructions for this is in NM3228 forum.
+The images that are animated have to be saved as separate images. If they overlap, the one on top has to be a transparent .png.
+
+We will be using this css library:
+http://daneden.github.io/animate.css/
+You can preview all the animations I stated in the link above. 
+
+Name of the animation is stated in quotes (e.g. "fadeIn")
+===================================================
+
 -> In long pontian queue, animate ponten queue slowly appearing longer as user scrolls down. "fadeIn"
 -> In "DAMMIT!! BONG", make the "BONG" and red impact lines zoom in. "tada"
 -> In "My family meepok.. really so bad?" make the meepok ghost fade in. "fadeinUp"
@@ -16,3 +28,4 @@ For animation
 
 For code
 install minimap
+code the branching
