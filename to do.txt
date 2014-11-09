@@ -1,11 +1,16 @@
+
+/****************
 For panels
+****************/
 mp3: make xiaolian speak english only.
 mp4: introduce gordon ramly. "The world's top celebrity chef and host of the World Masterchef Competition."
 mp5: improve the coloring for the hawker center. it has to look like a hawker center. add skies/hdbs in the backdrop.
 mp6: draw first frame hawker tables and patrons
 
 
+/****************
 For animation
+****************/
 ===================================================
 INSTRUCTIONS:
 You have to use wow.js. Instructions for this is in NM3228 forum.
@@ -26,6 +31,15 @@ Name of the animation is stated in quotes (e.g. "fadeIn")
 -> In "...?!" make it bounce in with "bounceInDown"
 -> In "...IS THAT?!" make it bounce in with "bounceInDown"
 
+/****************
 For code
+****************/
 install minimap
 code the branching
+
+/****************
+For documentation
+****************/
+learning process of code and photoshop and coloring
+and our feedback and storyline revisions
+and the research we did on noodle history 
