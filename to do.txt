@@ -31,6 +31,8 @@ Name of the animation is stated in quotes (e.g. "fadeIn")
 -> In "...?!" make it bounce in with "bounceInDown"
 -> In "...IS THAT?!" make it bounce in with "bounceInDown"
 
+For 1024x640, size 66.7%
+
 /****************
 For code
 ****************/
