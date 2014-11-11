@@ -363,6 +363,83 @@ a {
 	background-color: #FFFFFF;
 }
 </style>
+<script type="text/javascript" src="_scripts/jQuery.js"> </script>
+<script type="text/javascript" src="_scripts/ion.sound.min.js"> </script>
+<script type="text/javascript"> 
+//FUNCTION to update viewport location
+function updateScroll() {
+	minTop = $(document).scrollTop();
+	maxTop = minTop + $(window).height();
+	minLeft = $(document).scrollLeft();
+	maxLeft = minLeft + $(window).width();
+}
+
+//FUNCTION that returns true if entire div is in viewport
+function appears(div) {
+	var ele = $("#"+div);
+    if (
+        (ele.offset().top >= minTop && ele.offset().top + ele.height() < maxTop) &&
+        (ele.offset().left >= minLeft && ele.offset().left + ele.width() < maxLeft)
+    ){
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+//FUNCTION to trigger sounds once
+function soundTrig(div,sound) {
+	//Generate namespace based on div and sound name
+	var ns = "scroll."+div+sound;
+	//Bind scroll function with unique namespace (scroll.divsound)
+	$(window).bind(ns, function() {
+	   //Check if the top of the div has been reached. If so, then...
+	   if( appears(div) ) {
+		   //Play sound
+		   ion.sound.play(sound);
+		   //Unbind this particular scroll function so it does not keep playing
+		   $(window).unbind(ns);
+	   }
+	});
+}
+
+//Establish variables for scroll locations
+var minTop, maxTop, minLeft, maxLeft;
+//Bind updateScroll to fire every time user scrolls
+$(window).scroll(updateScroll);
+
+//Sound files specified here. Put all sounds in a subfolder of _sounds/ , they should all be mp3s.
+//My sounds were from: http://www.freesound.org/people/Spol/sounds/77199/ and http://www.freesound.org/people/Npeo/sounds/203121/
+
+ion.sound({
+    sounds: [
+        //EDIT THIS PART. Each sound needs to have its own entry, as below.  If a sound is from the file "hiphop.mp3", the name is simply "hiphop" (without the .mp3)
+		{
+            name: "hiphop",
+            volume: 0.5,
+            preload: true
+        },
+		//Hiphop sound entry ends above this line.
+		{
+            name: "meow",
+            volume: 0.5,
+            preload: true
+        }
+		//Meow sound entry ends above this line. 
+    ],
+    volume: 0.5,
+    path: "_sounds/",
+    preload: true
+});
+
+//EDIT THIS PART- adding the line soundTrig("testingdiv","hiphop"); tells the script to play "hiphop.mp3" when the div with id "testingdiv" is scrolled to.
+//Note that you should NOT put the # when specifying the div, and should NOT put the .mp3 when specifying the sound file
+soundTrig("apDiv1","hiphop");
+soundTrig("apDiv2","meow");
+soundTrig("apDiv3","meow");
+
+</script>
 </head>
 
 <body>
@@ -417,7 +494,7 @@ a {
 </div>
 
 <script src="_js/wow.min.js"></script>
-<script src="_js/jquery-1.11.1.min.js"></script>
+
 <script>
 new WOW().init();
 </script>
