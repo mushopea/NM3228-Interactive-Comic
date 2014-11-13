@@ -522,6 +522,46 @@ a {
 	left: 483px;
 	top: 8636px;
 }
+#apDiv63 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 59;
+	left: 427px;
+	top: 28032px;
+}
+#apDiv64 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 60;
+	left: 852px;
+	top: 10040px;
+}
+#apDiv65 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 61;
+	left: 802px;
+	top: 2618px;
+}
+#apDiv66 {
+	position: absolute;
+	width: 160px;
+	height: 79px;
+	z-index: 62;
+	left: 823px;
+	top: 30436px;
+}
+#apDiv67 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 63;
+	left: 541px;
+	top: 37142px;
+}
 </style>
 <script type="text/javascript" src="_scripts/jQuery.js"> </script>
 <script type="text/javascript" src="_scripts/ion.sound.min.js"> </script>
@@ -576,17 +616,37 @@ ion.sound({
     sounds: [
         //EDIT THIS PART. Each sound needs to have its own entry, as below.  If a sound is from the file "hiphop.mp3", the name is simply "hiphop" (without the .mp3)
 		{
-            name: "hiphop",
+            name: "crowdtalking",
             volume: 0.5,
             preload: true
         },
 		//Hiphop sound entry ends above this line.
 		{
-            name: "meow",
+            name: "whack",
+            volume: 0.5,
+            preload: true
+        },
+		//Meow sound entry ends above this line. 
+	   {
+            name: "slurp",
+            volume: 0.5,
+            preload: true
+        },
+		{
+            name: "spit",
+            volume: 0.5,
+            preload: true
+        },
+		{
+            name: "cameraclicks",
+            volume: 0.5,
+            preload: true
+        },
+		{
+            name: "pop",
             volume: 0.5,
             preload: true
         }
-		//Meow sound entry ends above this line. 
     ],
     volume: 0.5,
     path: "_sounds/",
@@ -595,9 +655,13 @@ ion.sound({
 
 //EDIT THIS PART- adding the line soundTrig("testingdiv","hiphop"); tells the script to play "hiphop.mp3" when the div with id "testingdiv" is scrolled to.
 //Note that you should NOT put the # when specifying the div, and should NOT put the .mp3 when specifying the sound file
-soundTrig("apDiv1","hiphop");
-soundTrig("apDiv2","meow");
-soundTrig("apDiv3","meow");
+soundTrig("apDiv65","crowdtalking");
+soundTrig("apDiv29","whack");
+soundTrig("apDiv64","slurp");
+soundTrig("apDiv30","spit");
+soundTrig("apDiv63","cameraclicks");
+soundTrig("apDiv66","pop");
+soundTrig("apDiv67","crowdtalking");
 
 </script>
 </head>
@@ -607,7 +671,7 @@ soundTrig("apDiv3","meow");
 <div id="apDiv1" class="wow rollIn"><img src="_images/MeePok Queen Title.jpg" width="591" height="557" /></div>
 <div id="apDiv2" class="wow fadeIn" data-wow-offset="50" data-wow-duration="1.2s"><img src="_images/1.jpg" width="818" height="1546" /></div>
 <div id="apDiv61" class="wow fadeIn"><img src="_images/2.jpg" width="818" height="586" /></div>
-<div id="apDiv3" class="wow fadeIn"><img src="_images/Animated Queue/animated queue 1.jpg" width="818" height="1961" /></div>
+<div id="apDiv3" class="wow fadeIn"><img src="_images/Animated Queue/animated queue 1.jpg" width="818" height="1961" /></div><div id="apDiv65"></div>
 <div id="apDiv21" class="wow fadeInUp"><img src="_images/Animated Queue/animated queue 2.png" /></div>
 <div id="apDiv22" class="wow fadeInUp"><img src="_images/Animated Queue/animated queue 3.png" /></div>
 <div id="apDiv23" class="wow fadeInLeft" data-wow-delay="1s"><img src="_images/Animated Queue/animated queue 4.png" /></div>
@@ -621,7 +685,7 @@ soundTrig("apDiv3","meow");
 <div id="apDiv26" class="wow fadeIn" data-wow-duration="1.5s"><img src="_images/Animated Ghost/is reallysobad meh.png" /></div>
 <div id="apDiv27" class="wow fadeIn" data-wow-offset="50" data-wow-duration="1.5s"><img src="_images/Animated Ghost/whydoi.png" /></div>
 <div id="apDiv11" class="wow fadeInUp" data-wow-duration="2s"><img src="_images/Animated Ghost/animated ghost.png" width="181" height="261" /></div>
-
+<div id="apDiv64"></div>
 <div id="apDiv7" class="wow fadeIn" data-wow-offset="50" data-wow-duration="2s"><img src="_images/6.jpg" width="692" height="1595" /></div>
 <div id="apDiv62" class="wow hinge" data-wow-offset="50" data-wow-duration="4s"><img src="_images/6.1.jpg" width="621" height="177" /></div>
 <div id="apDiv8" class="wow fadeIn" data-wow-offset="50" data-wow-duration="1.2s"><img src="_images/7.jpg" width="740" height="1989" /></div>
@@ -645,17 +709,20 @@ soundTrig("apDiv3","meow");
 <div id="apDiv49" class="wow fadeIn"><img src="_images/meepokqueen3_08.jpg" width="527" height="408" /></div>
 <div id="apDiv50" class="wow fadeIn"><img src="_images/meepokqueen3_09.jpg" width="716" height="821" /></div>
 <div id="apDiv13" class="wow fadeIn" data-wow-duration="1.2s"><img src="_images/meepokqueen4.jpg" width="818" height="2577" /></div>
+<div id="apDiv63"><img src="_images/meepokqueen4_01.jpg" width="818" height="291" /></div>
 <div id="apDiv42"></div>
 <div id="apDiv39" class="wow fadeInDown" data-wow-offset ="50"data-wow-duration="1.2s"><img src="_images/Animated Ramly Appears/1.png" /></div>
 <div id="apDiv40" class="wow bounceInDown" data-wow-offset ="100"data-wow-duration="1.7s" ><img src="_images/Animated Ramly Appears/2.png" /></div>
 <div id="apDiv41" class="wow fadeInDown" data-wow-offset ="150"data-wow-duration="1.9s"><img src="_images/Animated Ramly Appears/3.png" /></div>
 <div id="apDiv51" class="wow fadeIn"><img src="_images/meepokqueen5_01.jpg" width="818" height="828" /></div>
 <div id="apDiv52" class="wow fadeIn"><img src="_images/meepokqueen5_02.jpg" width="818" height="828" /></div>
+<div id="apDiv66"></div>
 <div id="apDiv53" class="wow fadeIn"><img src="_images/meepokqueen5_03.jpg" width="818" height="925" /></div>
 <div id="apDiv54" class="wow fadeIn"><img src="_images/meepokqueen6_01.jpg" width="818" height="1477" /></div>
 <div id="apDiv55" class="wow fadeIn"><img src="_images/meepokqueen6_02.jpg" width="818" height="1097" /></div>
 <div id="apDiv56" class="wow fadeIn"><img src="_images/meepokqueen6_03.jpg" width="818" height="1056" /></div>
 <div id="apDiv57" class="wow fadeIn"><img src="_images/meepokqueen7_01.jpg" width="818" height="1027" /></div>
+<div id="apDiv67"></div>
 <div id="apDiv58" class="wow fadeIn"><img src="_images/meepokqueen7_02.jpg" width="818" height="1027" /></div>
 <div id="apDiv59" class="wow fadeIn"><img src="_images/meepokqueen7_03.jpg" width="818" height="1027" /></div>
 <div id="apDiv60" class="wow fadeIn"><img src="_images/meepokqueen7_04.jpg" width="818" height="1027" /></div>
