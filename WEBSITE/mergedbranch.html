@@ -28,14 +28,96 @@ a {
 	left: 442px;
 	top: 3px;
 }
+#apDiv2 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 2;
+	left: 434px;
+	top: 10350px;
+}
+#apDiv3 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 3;
+	left: 435px;
+	top: 10352px;
+}
+#apDiv4 {
+	position: absolute;
+	width: 253px;
+	height: 474px;
+	z-index: 22;
+	left: 458px;
+	top: 10513px;
+}
+#apDiv5 {
+	position: absolute;
+	width: 248px;
+	height: 456px;
+	z-index: 22;
+	left: 992px;
+	top: 10513px;
+}
+#apDiv6 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 6;
+	left: 434px;
+	top: 10350px;
+	display: none;
+}
+#apDiv7 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 6;
+	left: 434px;
+	top: 10350px;
+	display: none;
+}
 </style>
 </head>
 
 <body>
 <div id="apDiv1"><img src="_images_branchmerged/branchmerged.jpg" width="818" height="9932" /></div>
+<div id="apDiv2" class="wow fadeIn"><img src="_images_branchmerged/choices/endingschoices_noangeldevil.png" /></div>
+<div id="apDiv3" class="wow fadeInDown" data-wow-offset="300" data-wow-duration="2s" data-wow-delay="1s"><img src="_images_branchmerged/choices/endingschoices_ani.png" /></div>
+<a href="ending1.html"><div id="apDiv4"></div></a>
+<a href="ending2.html"><div id="apDiv5"></div></a>
+<div id="apDiv6"><img src="_images_branchmerged/choices/devil.png" /></div>
+<div id="apDiv7"><img src="_images_branchmerged/choices/angel.png" /></div>
+
+
+
 <script src="_js/wow.min.js"></script>
 <script src="_js/jquery-1.11.1.min.js"></script>
+
+
 <script>
+$(document).ready(function() {
+	$("#apDiv4") // select your element (supports CSS selectors)
+    .hover(function(){ // trigger the mouseover event
+        $("#apDiv6") // select the element to show (can be anywhere)
+            .show(); // show the element
+    }, function(){ // trigger the mouseout event
+        $("#apDiv6") // select the same element
+            .hide(); // hide it
+    });
+	
+		$("#apDiv5") // select your element (supports CSS selectors)
+    .hover(function(){ // trigger the mouseover event
+        $("#apDiv7") // select the element to show (can be anywhere)
+            .show(); // show the element
+    }, function(){ // trigger the mouseout event
+        $("#apDiv7") // select the same element
+            .hide(); // hide it
+    });
+	
+	
+});
 new WOW().init();
 </script>
 </body>
