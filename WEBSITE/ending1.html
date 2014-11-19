@@ -318,7 +318,101 @@
 	left: 924px;
 	top: 23528px;
 }
+#apDiv40 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 40;
+	left: 263px;
+	top: 11646px;
+}
+#apDiv41 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 41;
+	left: 325px;
+	top: 19106px;
+}
 </style>
+<script type="text/javascript" src="_scripts/jQuery.js"> </script>
+
+<script type="text/javascript" src="_scripts/ion.sound.min.js"> </script>
+<script type="text/javascript"> 
+//FUNCTION to update viewport location
+function updateScroll() {
+	minTop = $(document).scrollTop();
+	maxTop = minTop + $(window).height();
+	minLeft = $(document).scrollLeft();
+	maxLeft = minLeft + $(window).width();
+}
+
+//FUNCTION that returns true if entire div is in viewport
+function appears(div) {
+	var ele = $("#"+div);
+    if (
+        (ele.offset().top >= minTop && ele.offset().top + ele.height() < maxTop) &&
+        (ele.offset().left >= minLeft && ele.offset().left + ele.width() < maxLeft)
+    ){
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+//FUNCTION to trigger sounds once
+function soundTrig(div,sound) {
+	//Generate namespace based on div and sound name
+	var ns = "scroll."+div+sound;
+	//Bind scroll function with unique namespace (scroll.divsound)
+	$(window).bind(ns, function() {
+	   //Check if the top of the div has been reached. If so, then...
+	   if( appears(div) ) {
+		   //Play sound
+		   ion.sound.play(sound);
+		   //Unbind this particular scroll function so it does not keep playing
+		   $(window).unbind(ns);
+	   }
+	});
+}
+
+//Establish variables for scroll locations
+var minTop, maxTop, minLeft, maxLeft;
+//Bind updateScroll to fire every time user scrolls
+$(window).scroll(updateScroll);
+
+//Sound files specified here. Put all sounds in a subfolder of _sounds/ , they should all be mp3s.
+//My sounds were from: http://www.freesound.org/people/Spol/sounds/77199/ and http://www.freesound.org/people/Npeo/sounds/203121/
+
+ion.sound({
+    sounds: [
+        //EDIT THIS PART. Each sound needs to have its own entry, as below.  If a sound is from the file "hiphop.mp3", the name is simply "hiphop" (without the .mp3)
+		{
+            name: "crowdtalking",
+            volume: 0.5,
+            preload: true
+        },
+		//Hiphop sound entry ends above this line.
+		{
+            name: "airplane",
+            volume: 1.0,
+            preload: true
+        },
+	
+    ],
+    volume: 0.5,
+    path: "_sounds/",
+    preload: true
+});
+
+//EDIT THIS PART- adding the line soundTrig("testingdiv","hiphop"); tells the script to play "hiphop.mp3" when the div with id "testingdiv" is scrolled to.
+//Note that you should NOT put the # when specifying the div, and should NOT put the .mp3 when specifying the sound file
+soundTrig("apDiv40","crowdtalking");
+soundTrig("apDiv41","airplane");
+
+
+</script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Meepok Queen</title>
 </head>
@@ -344,21 +438,23 @@
 <div id="apDiv36" class="wow flash" data-wow-iteration="2"><img src="_images_ending1/attention.png" width="227" height="50" /></div>
 <div id="apDiv18" class="wow fadeIn"><img src="_images_ending1/ending1b_01.jpg" width="818" height="810" /></div>
 <div id="apDiv19" class="wow fadeIn"><img src="_images_ending1/ending1b_02.jpg" width="818" height="839" /></div>
+<div id="apDiv40"></div>
 <div id="apDiv20" class="wow flash" data-wow-iteration="3"><img src="_images_ending1/judging2.png" width="467" height="30" /></div>
-<div id="apDiv21" class="wow flash" data-wow-iteration="2"><img src="_images_ending1/firstup.png" width="818" height="69" /></div>
+<div id="apDiv21" class="wow bounceIn" data-wow-iteration="2"><img src="_images_ending1/firstup.png" width="818" height="69" /></div>
 <div id="apDiv22" class="wow fadeIn"><img src="_images_ending1/ending1b_03.jpg" width="818" height="450" /></div>
 <div id="apDiv37" class="hint--rounded hint--top" data-hint="Fuck!"></div>
-<div id="apDiv23" class="wow flash" data-wow-iteration="2"><img src="_images_ending1/theseconddish.png" width="818" height="59" /></div>
+<div id="apDiv23" class="wow bounceIn" data-wow-iteration="2"><img src="_images_ending1/theseconddish.png" width="818" height="59" /></div>
 <div id="apDiv24" class="wow fadeIn"><img src="_images_ending1/ending1b_04.jpg" width="818" height="554" /></div>
-<div id="apDiv25" class="wow flash" data-wow-iteration="2"><img src="_images_ending1/third.png" width="694" height="51" /></div>
+<div id="apDiv25" class="wow bounceIn" data-wow-iteration="2"><img src="_images_ending1/third.png" width="694" height="51" /></div>
 <div id="apDiv26" class="wow fadeIn"><img src="_images_ending1/ending1b_05.jpg" width="818" height="626" /></div>
-<div id="apDiv27" class="wow flash" data-wow-iteration="2"><img src="_images_ending1/lastly.png" width="634" height="87" /></div>
+<div id="apDiv27" class="wow bounceIn" data-wow-iteration="2"><img src="_images_ending1/lastly.png" width="634" height="87" /></div>
 <div id="apDiv28" class="wow fadeIn"><img src="_images_ending1/ending1b_06.jpg" width="818" height="450" /></div>
 <div id="apDiv29" class="wow tada" data-wow-iteration="3"><img src="_images_ending1/clearwinner.png" width="818" height="138" /></div>
 <div id="apDiv30" class="wow fadeIn"><img src="_images_ending1/ending1b_07.jpg" width="818" height="639" /></div>
 <div id="apDiv31" class="wow flash"><img src="_images_ending1/yes.png" width="171" height="59" /></div>
 <div id="apDiv32" class="wow shake"><img src="_images_ending1/uh.png" width="156" height="80" /></div>
 <div id="apDiv33" class="wow fadeIn"><img src="_images_ending1/ending1b_08.jpg" width="818" height="547" /></div>
+<div id="apDiv41"></div>
 <div id="apDiv34" class="wow fadeIn"><img src="_images_ending1/ending1b_09.jpg" width="818" height="857" /></div>
 <div id="apDiv35" class="wow fadeIn"><img src="_images_ending1/ending1b_10.jpg" width="818" height="758" /></div>
 <div id="apDiv38" class="wow fadeIn"><img src="_images_ending1/ending1b_11.jpg" width="818" height="1286" /></div>
